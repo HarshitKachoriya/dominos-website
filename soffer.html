@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{background-color: #ededed;}
+* {box-sizing: border-box;}
+    .na { margin-top: 50px;
+  overflow:hidden;
+    position: fixed;
+  background-color: #0088ac;
+top: 0px;
+    width: 16%;
+        margin-left: 40%;
+        
+}
+    
+
+.na a {
+  float: left;
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration:none;
+  font-size: 18px; 
+  line-height:20px;
+  border-radius: 10px;
+}
+
+.na a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.na a.active {
+  background-color: #d2112c;
+  color: white;
+}
+.na-right {
+  float:none;
+    font-family:serif;
+    padding: 0px;
+}
+    .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+#offer
+    {
+    background-color: #ddd;
+        padding: 5px;
+        width: 40%;
+        height: 20%;
+        color: #006633;
+    }
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+  border-bottom: 3px solid red;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+  border-bottom: 3px solid red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+    </style>
+    </head>
+    <body>
+            
+<div class="nav">
+    <a href="dominos.html"><img src="pics/Dpng.png" style="height:25px; width:120px; margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <div class="nav-right">
+    <a  href="dominos.html" target="_self">HOME</a>
+      <a href="menu.html">OUR MENU</a>
+      <a  class="active" href="Soffer.html">SPECIAL OFFERS</a>
+    <a href="2.html">CONTACT</a>
+    <a href="3.html">INSIDE DOMINOS</a>
+    </div>   </div>
+<img src="pics/ofer.jpg" style="margin-top: 45px; width: 100%; height: auto;">
+        <h3>DOMINO'S SPECIAL OFFERS</h3>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Regular Pizza starting @ 99 each </button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Regular Pizza starting @ 199 each</button>
+</div>
+
+<div id="London" class="tabcontent">
+    <div id="offer"><h4>2 Pizza at rs. 99 each;</h4>
+    <p>Select any 2 Regular Pizzas Worth <strike>169</strike> @99 each</p>
+    </div>
+    <div id="offer" style="float: left;"><h4>2 Pizza at rs. 139 each;</h4>
+    <p>Select any 2 Regular Pizzas Worth <strike>205</strike> @139 each</p>
+    </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+    <div id="offer"><h4>2 Pizza at rs. 199 each;</h4>
+    <p>Select any 2 Regular Pizzas Worth <strike>305</strike> @199 each</p>
+    </div>
+    <div id="offer" style="float: left;"><h4>2 Pizza at rs. 139 each;</h4>
+    <p>Select any 2 Regular Pizzas Worth <strike>450</strike> @299 each</p>
+    </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
